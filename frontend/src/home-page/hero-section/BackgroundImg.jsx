@@ -4,8 +4,8 @@ import { SearchBar } from "./SearchBar";
 
 export const BackgroundImg = () => {
   return (
-    <div className="hero-img">
-      <div className="black-overlay text-white text-center ">
+    <div className="hero-img shadow-xl">
+      <div className="black-overlay text-white text-center shadow-xl">
         <div className="hero-content flex flex-col justify-center h-full">
           <HeroContent />
           <SearchBar />
