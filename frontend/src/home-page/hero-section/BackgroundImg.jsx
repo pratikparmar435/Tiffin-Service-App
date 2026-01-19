@@ -2,7 +2,7 @@ import { HeroContent } from "./HeroContent";
 import "./HeroSection.css";
 import { SearchBar } from "./SearchBar";
 
-export const BackgroundImg = () => {
+const BackgroundImg = () => {
   return (
     <div className="hero-img shadow-xl">
       <div className="black-overlay text-white text-center shadow-xl">
@@ -20,3 +20,5 @@ export const BackgroundImg = () => {
     </div>
   );
 };
+
+export default BackgroundImg;

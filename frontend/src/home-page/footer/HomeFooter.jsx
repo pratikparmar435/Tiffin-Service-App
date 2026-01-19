@@ -2,8 +2,8 @@ import { Phone, MessageSquareText } from "lucide-react";
 
 const HomeFooter = () => {
   return (
-    <div className="bg-white pt-10">
-      <div className="grid grid-cols-12 mx-50 h-62 py-3">
+    <div className="bg-white">
+      <div className="grid grid-cols-12 max-w-7xl mx-auto px-8 py-14">
         <div className="col-span-3">
           <div className="flex items-center mb-5">
             <img
