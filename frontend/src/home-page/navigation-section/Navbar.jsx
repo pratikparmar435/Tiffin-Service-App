@@ -1,12 +1,12 @@
 function Navbar() {
   return (
     <>
-      <div className="flex   justify-between items-center bg-[#f1edeb] shadow-md h-17 sticky top-0 z-2">
+      <div className="flex justify-between items-center bg-[#f1edeb] shadow-md h-17 sticky top-0 z-2">
         <div className="items-center flex justify-around w-[15%]">
           <img
-            src="https://www.kindpng.com/picc/m/145-1453930_breakfast-tiffin-service-in-gandhi-nagar-jammu-tiffin.png"
-            alt=""
-            className="h-10 w-10 ms-3 rounded-4xl"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfQ9OGMdZzHWxV-Y4fkFA5ZK22YJo1lbfSw&s"
+            alt="website-logo"
+            className="h-12 w-12 ms-3 rounded-4xl"
           />
           <b className="text-2xl">TiffinService</b>
         </div>
