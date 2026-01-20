@@ -5,3 +5,22 @@
   background-size: contain;
   border-radius: 50%;
 }
+
+.tiffin-main-img {
+  background-image: url("../assets/DemoFoodPhoto.png");
+  background-size: cover;
+}
+
+.tiffin-sub-img {
+  background-image: url("../assets/DemoFoodPhoto.png");
+  height: 80px;
+  width: 80px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.viewall-btn {
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+}
