@@ -17,7 +17,7 @@ const SubHero = () => {
     },
     {
       cardImg: <Truck color="#f47b25" size={29} />,
-      title: "Choose plan",
+      title: "Daily delivery",
       content:
         "Enjoy hot, home-cooked meals delivered fresh at your scheduled time.",
     },
