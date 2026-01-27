@@ -1,9 +1,8 @@
 import { useState } from "react";
 import PlanCard from "./PlanCard";
 
-const CardContainer = ({ activePlan }) => {
+const CardContainer = ({ activePlan, selectedPlan, setSelectedPlan }) => {
   const [deliveryDay, setDeliveryDay] = useState("today");
-  const [selectedPlan, setSelectedPlan] = useState(null);
   return (
     <div className="flex justify-between">
       <div className="card-container flex gap-5">
@@ -32,7 +31,7 @@ const CardContainer = ({ activePlan }) => {
             duration="One-Time"
             price={120}
             description="No commitment, just one fresh, home-cooked meal."
-            selected={selectedPlan === "monthly"}
+            selected={selectedPlan === "one-time"}
             onClick={setSelectedPlan}
           />
         )}
