@@ -23,7 +23,7 @@ const WeeklyMenu = () => {
   return (
     <div className="max-w-[75%] m-auto mt-10">
       <h2 className="text-2xl mb-7">Weekly Menu</h2>
-      <div className="bg-white rounded-xl shadow-sm">
+      <div className="bg-[#fefefd] rounded-xl shadow-sm">
         <div className="p-1 flex justify-evenly items-center shadow-sm">
           {menu.map((obj, idx) => {
             return (

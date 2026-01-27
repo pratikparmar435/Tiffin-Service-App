@@ -2,7 +2,7 @@ const PlanCard = (cardDetails) => {
   return (
     <div
       onClick={() => cardDetails.onClick(cardDetails.id)}
-      className={`relative cursor-pointer bg-white rounded-xl h-50 w-60 p-7 flex flex-col gap-3 border-2 transition-all
+      className={`relative cursor-pointer bg-[#fefefd] rounded-xl h-50 w-60 p-7 flex flex-col gap-3 border-2 transition-all
         ${cardDetails.selected ? "border-orange-500" : "border-transparent"}`}
     >
       <div className="font-bold text-2xl flex justify-between">
