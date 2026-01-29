@@ -1,14 +1,13 @@
-import CustmorProfile from "./custmor-profile-page/CustmorProfile";
+import CustomerProfile from "./customer-profile-page/CustomerProfile";
 import HomePage from "./home-page/HomePage";
 import OrderPage from "./order-tifiin-page/OrderPage";
-
 
 function App() {
   return (
     <>
       {/* <HomePage />
       <OrderPage /> */}
-      <CustmorProfile />
+      <CustomerProfile />
     </>
   );
 }
