@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./navigation-section/Navbar";
 import Header from "./header-section/Header";
+import Footer from "./footer-section/Footer";
 
 const ServiceProviderProfile = () => {
   return (
@@ -8,6 +9,7 @@ const ServiceProviderProfile = () => {
       <Navbar />
       <div className="w-[90%] m-auto">
         <Header />
+        <Footer />
       </div>
     </div>
   );
