@@ -7,10 +7,10 @@ import ServiceProviderProfile from "./service-provider-profile-page/ServiceProvi
 function App() {
   return (
     <>
-      {/* <HomePage />
-      <OrderPage /> */}
-      {/* // <CustomerProfile /> */}
-      <ServiceProviderProfile></ServiceProviderProfile>
+      {/*  <HomePage />  */}
+      {/* <OrderPage /> */}
+      {/* <CustomerProfile /> */}
+      <ServiceProviderProfile />
     </>
   );
 }
