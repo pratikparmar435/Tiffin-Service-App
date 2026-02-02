@@ -4,7 +4,7 @@ const Navbar = () => {
   const [currState, setCurrState] = useState("closed");
   return (
     <div className="bg-white sticky top-0 shadow py-3 px-8 flex w-full justify-between items-center">
-      <div className="flex w-[20%] gap-3">
+      <div className="flex gap-3">
         <div className="h-11 w-11 rounded-md bg-[#f47b25] p-2.5">
           <UtensilsCrossed strokeWidth={3} color="#fff" />
         </div>
@@ -13,28 +13,24 @@ const Navbar = () => {
           <span className="text-sm text-[#6e6e77]">Provider address</span>
         </div>
       </div>
-      <div className="flex w-[70%] gap-10 justify-end">
-        <div className="relative w-[15%] bg-[#f4f4f5] h-12 rounded-xl flex">
+      <div className="flex ml-auto gap-10">
+        <div className="relative w-36 bg-[#f4f4f5] h-12 rounded-xl flex items-center p-1 overflow-hidden">
           <div
-            className={`absolute top-1 left-1 w-[48%] h-10 bg-[#10b981] rounded-lg transition-all duration-300 ease-in-out
-              ${currState === "closed" ? "translate-x-full bg-red-500" : ""}
+            className={`absolute left-1 top-1 w-1/2 h-10 rounded-lg transition-transform duration-300 ease-in-out
+              ${currState === "closed" ? "translate-x-full bg-red-500" : "translate-x-0 bg-[#10b981]"}
             `}
           ></div>
           <button
-            onClick={() => {
-              setCurrState("open");
-            }}
-            className={`z-10 cursor-pointer w-1/2 text-sm font-medium transition-colors duration-300
+            onClick={() => setCurrState("open")}
+            className={`relative z-10 flex-1 text-sm font-medium transition-colors duration-300 text-center
               ${currState === "open" ? "text-white" : "text-[#76767f]"}
             `}
           >
             Open
           </button>
           <button
-            onClick={() => {
-              setCurrState("closed");
-            }}
-            className={`z-10 w-1/2 cursor-pointer text-sm font-medium transition-colors duration-300
+            onClick={() => setCurrState("closed")}
+            className={`relative z-10 flex-1 text-sm font-medium transition-colors duration-300 text-center
               ${currState === "closed" ? "text-white" : "text-[#76767f]"}
             `}
           >
