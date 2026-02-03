@@ -1,0 +1,7 @@
+.google-img {
+  background-image: url(../assets/GoogleLogo.png);
+  height: 25px;
+  width: 25px;
+  background-size: contain;
+  border-radius: 50%;
+}
