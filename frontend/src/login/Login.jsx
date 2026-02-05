@@ -42,16 +42,16 @@ const Login = () => {
         </div>
       </nav>
       {/* Main Section  */}
-      <div className="flex flex-col justify-center items-center  h-[90vh]">
+      <div className="flex flex-col justify-center items-center">
         {/* Headings  */}
-        <div className="text-center mb-6">
+        <div className="text-center my-6">
           <h1 className="font-semibold text-3xl">Welcome Back</h1>
           <span className="text-sm text-[#6f7e93]">
             Healthy home-style food, delivered daily
           </span>
         </div>
         {/* Main  */}
-        <div className=" w-[27%] bg-white flex flex-col p-10 shadow-sm">
+        <div className=" w-[27%] bg-white rounded-2xl flex flex-col p-10 shadow-sm">
           <form action="" className="flex flex-col" onSubmit={handleSubmit}>
             <label htmlFor="email" className="text-sm font-semibold mb-1">
               Email

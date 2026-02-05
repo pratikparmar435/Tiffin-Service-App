@@ -1,0 +1,17 @@
+.bg-img-customer {
+  background-image: url(../assets/RegisterDemoImg.png);
+  background-size: cover;
+  border-radius: 10px;
+  height: 150px;
+  background-position: center;
+  margin-top: 20px;
+}
+
+.bg-img-service-provider {
+  background-image: url(../assets/RegisterDemoImg2.png);
+  background-size: cover;
+  border-radius: 10px;
+  height: 150px;
+  background-position: center;
+  margin-top: 20px;
+}
