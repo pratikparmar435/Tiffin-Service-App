@@ -1,7 +1,7 @@
 import { HeroContent } from "./HeroContent";
 import "./HeroSection.css";
 import { SearchBar } from "./SearchBar";
-
+import { Link } from "react-router-dom";
 const BackgroundImg = () => {
   return (
     <div className="hero-img shadow-xl">
@@ -11,9 +11,13 @@ const BackgroundImg = () => {
           <SearchBar />
           <span className="font-light mt-2">
             Are you a home cook?{" "}
-            <a href="#" className="text-[#f47b25] font-medium">
+            <Link
+              to={"/register"}
+              href="#"
+              className="text-[#f47b25] font-medium"
+            >
               Become a Service Provider
-            </a>
+            </Link>
           </span>
         </div>
       </div>

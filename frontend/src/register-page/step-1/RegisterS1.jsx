@@ -1,6 +1,7 @@
 import { Utensils, CookingPot, Check } from "lucide-react";
 import "../register.css";
-import { useState } from "react";
+import { act, useState } from "react";
+import { Link } from "react-router-dom";
 
 const RegisterS1 = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -99,17 +100,24 @@ const RegisterS1 = () => {
           </div>
         </div>
         {/* Continue button  */}
-        <button className="text-white bg-[#f47b25] p-4 w-full rounded-xl font-semibold text-lg cursor-pointer">
+        <Link
+          to={
+            activeCard === "customer"
+              ? "/customer-register"
+              : "/provider-register"
+          }
+          className="text-white bg-[#f47b25] inline-block text-center p-4 w-full rounded-xl font-semibold text-lg cursor-pointer"
+        >
           Continue
-        </button>
+        </Link>
         <p className="text-center mt-6 mb-8 text-[#ae876a] text-sm">
           Already have an account?{" "}
-          <a
-            href="#"
+          <Link
+            to={"/login"}
             className="text-sm text-[#f47b25] tracking-tighter font-semibold"
           >
             Login here
-          </a>
+          </Link>
         </p>
       </div>
     </div>

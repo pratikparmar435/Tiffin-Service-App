@@ -8,7 +8,7 @@ import Footer from "./footer-section/Footer";
 
 const ServiceProviderProfile = () => {
   return (
-    <div className="bg-[#f5f7fa]">
+    <div className="bg-[#f5f7fa] min-h-screen ">
       <Navbar />
       <div className="w-[90%] m-auto">
         <Header />
@@ -30,8 +30,8 @@ const ServiceProviderProfile = () => {
               <PlanAndRates />
             </div>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </div>
   );

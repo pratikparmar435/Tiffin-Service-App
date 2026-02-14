@@ -1,7 +1,7 @@
 import { University, BadgeCheck, Settings, LogOut } from "lucide-react";
 const Footer = () => {
   return (
-    <div className="my-10 flex gap-4">
+    <div className="mt-10 flex gap-4">
       <div className="flex-1 bg-white rounded-2xl h-30 shadow-sm flex gap-4 items-center px-5">
         <div className="h-12 w-12 rounded-lg p-3 bg-[#f4f4f5]">
           <University color="#10b981" strokeWidth={2.25} />

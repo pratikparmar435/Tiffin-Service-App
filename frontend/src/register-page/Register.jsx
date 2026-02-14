@@ -7,9 +7,7 @@ const Register = () => {
   return (
     <>
       <Navbar />
-      {/* <RegisterS1 /> */}
-      {/* <ProviderRegister /> */}
-      {/* <CustomerRegister /> */}
+      <RegisterS1 />
     </>
   );
 };

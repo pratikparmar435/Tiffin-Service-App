@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <>
@@ -11,22 +13,27 @@ function Navbar() {
           <b className="text-2xl">TiffinService</b>
         </div>
         <div className=" flex w-[50%] justify-evenly items-center">
-          <a href="#" className="text-sm">
+          <Link href="#" className="text-sm">
             How it works
-          </a>
-          <a href="#" className="text-sm">
+          </Link>
+          <Link href="#" className="text-sm">
             Providers
-          </a>
-          <a href="#" className="text-sm">
+          </Link>
+          <Link href="#" className="text-sm">
             Plans
-          </a>
-          <a href="#" className="text-sm">
+          </Link>
+          <Link href="#" className="text-sm">
             Supports
-          </a>
-          <button className="bg-[#f47b25] rounded-md p-2 m-2 text-white px-7">
+          </Link>
+          <Link
+            to={"/register"}
+            className="bg-[#f47b25] rounded-md p-2 m-2 text-white px-7"
+          >
             Become Providers
-          </button>
-          <button className="bg-[#e3dcd7] rounded p-2 px-6">Login</button>
+          </Link>
+          <Link to={"/login"} className="bg-[#e3dcd7] rounded p-2 px-6">
+            Login
+          </Link>
         </div>
       </div>
     </>

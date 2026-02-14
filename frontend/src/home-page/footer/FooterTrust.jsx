@@ -11,9 +11,9 @@ function Mid() {
           <span className="mb-4">
             <Utensils color="#f47b25" strokeWidth={1.75} size={35} />
           </span>
-          <b>Fast food</b>
+          <b>Fast Food</b>
           <small className="text-gray-500">
-            Cooked just hour before Deliviery
+            Cooked just hour before Delivery
           </small>
         </div>
         <div className="flex flex-col justify-around items-center">
@@ -21,15 +21,15 @@ function Mid() {
             <HandCoins color="#f47b25" strokeWidth={1.75} size={35} />
           </span>
           <b>Affordable</b>
-          <small className="text-gray-500">pocet freindly plans</small>
+          <small className="text-gray-500">Pocket friendly plans</small>
         </div>
         <div className="flex flex-col justify-around items-center">
           <span className="mb-4">
             <ShieldCheck color="#f47b25" strokeWidth={1.75} size={35} />
           </span>
-          <b>varified</b>
+          <b>Verified</b>
           <small className="text-gray-500">
-            Hygine&quality checked performed
+            Hygiene & Quality check performed
           </small>
         </div>
         <div className="flex flex-col justify-around items-center">
@@ -37,7 +37,9 @@ function Mid() {
             <Radio color="#f47b25" strokeWidth={1.75} size={35} />
           </span>
           <b>Live tracking</b>
-          <small className="text-gray-500">Track your tiffin real-time</small>
+          <small className="text-gray-500">
+            Track your tiffin in real-time
+          </small>
         </div>
       </div>
     </div>
