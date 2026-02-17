@@ -7,6 +7,7 @@ import Register from "./register-page/Register";
 import ServiceProviderProfile from "./service-provider-profile-page/ServiceProviderProfile";
 import CustomerRegister from "./register-page/step-2/CustomerRegister";
 import ProviderRegister from "./register-page/step-2/ProviderRegister";
+import MainContent from "./search-page/MainContent";
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
             element={<ServiceProviderProfile />}
           />
           <Route path="/profile" element={<CustomerProfile />} />
+          {/* Search Page  */}
+          <Route path="/search" element={<MainContent />} />
         </Routes>
       </BrowserRouter>
     </>
