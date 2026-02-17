@@ -1,9 +1,16 @@
 import { MapPin, Search } from "lucide-react";
+import { useState } from "react";
 
 export const SearchBar = () => {
+  const [city, setCity] = useState("");
+
+  function handleSearchInput(e) {
+    setCity(e.target.value);
+  }
+
   return (
     <form
-      action=""
+      action="/search"
       className="flex items-center mx-auto mt-6 w-full max-w-3xl"
       style={{ margin: "0 auto" }}
     >
@@ -12,6 +19,8 @@ export const SearchBar = () => {
       </div>
       <input
         type="text"
+        value={city}
+        onChange={handleSearchInput}
         placeholder="Enter your city or area(e.g. Pune, Bangalore)"
         className="bg-white flex-1 h-12 px-3 text-[#2a2828] outline-none"
       />
