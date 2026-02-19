@@ -4,13 +4,13 @@ function Navbar() {
   return (
     <>
       <div className="flex justify-between items-center bg-[#f1edeb] shadow-md h-17 sticky top-0 z-2">
-        <div className="items-center flex justify-around w-[15%]">
+        <div className="items-center flex justify-around w-[13%]">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfQ9OGMdZzHWxV-Y4fkFA5ZK22YJo1lbfSw&s"
             alt="website-logo"
             className="h-12 w-12 ms-3 rounded-4xl"
           />
-          <b className="text-2xl">TiffinService</b>
+          <b className="text-2xl">TiffinHub</b>
         </div>
         <div className=" flex w-[50%] justify-evenly items-center">
           <Link href="#" className="text-sm">

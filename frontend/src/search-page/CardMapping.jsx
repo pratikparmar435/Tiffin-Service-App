@@ -12,10 +12,19 @@ function CardMapping({ meal }) {
         </div>
       </div>
       <div className="p-4 flex flex-col grow">
-        <h4 className="font-bold text-xl mb-1 text-gray-800">{meal.title}</h4>
-        <p className="text-gray-400 text-sm mb-4">Delivery in 30-40 mins</p>
+        <h4 className="font-bold text-xl mb-1 flex items-center gap-2 text-gray-800 capitalize">
+          {meal.title}{" "}
+          <div
+            className={`rounded-full h-3 w-3 ${meal.category === "veg" ? "bg-green-600" : "bg-red-600"}`}
+          ></div>
+        </h4>
+        <p className="text-[#b18a6f] text-sm mb-4 capitalize">
+          {meal.provider.name}
+        </p>
+        <p className="text-gray-400 capitalize text-sm mb-4">
+          {meal.provider.address}
+        </p>
         <div className="mt-auto flex items-center justify-between">
-          <p className="text-gray-400 text-sm mb-4">{meal.address}</p>
           <div className="flex flex-col">
             <span className="text-xs text-[#b18a6f]">STARTING FROM</span>
             <div>
@@ -25,7 +34,7 @@ function CardMapping({ meal }) {
               <span className="text-gray-500 text-sm"> /meal</span>
             </div>
           </div>
-          <button className="bg-[#f47b25] hover:bg-[#e36a14] text-white px-4 py-2 rounded-xl text-sm font-bold transition-colors">
+          <button className="bg-[#f47b25] hover:bg-[#e36a14] cursor-pointer text-white px-4 py-2 rounded-xl text-sm font-bold transition-colors">
             View Menu
           </button>
         </div>
