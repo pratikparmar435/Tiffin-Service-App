@@ -57,21 +57,6 @@ function MainContent() {
             {meals.map((meal, idx) => (
               <CardMapping meal={meal} key={idx} />
             ))}
-            {meals.map((meal, idx) => (
-              <CardMapping meal={meal} key={idx} />
-            ))}
-            {meals.map((meal, idx) => (
-              <CardMapping meal={meal} key={idx} />
-            ))}
-            {meals.map((meal, idx) => (
-              <CardMapping meal={meal} key={idx} />
-            ))}
-            {meals.map((meal, idx) => (
-              <CardMapping meal={meal} key={idx} />
-            ))}
-            {meals.map((meal, idx) => (
-              <CardMapping meal={meal} key={idx} />
-            ))}
           </div>
 
           {/* Pagination */}

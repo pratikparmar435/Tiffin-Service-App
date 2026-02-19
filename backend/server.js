@@ -40,8 +40,33 @@ app.get("/search", async (req, res) => {
     let providersIds = providers.map((p) => p._id);
     let meals = await Meal.find({ provider: { $in: providersIds } });
     res.json(meals);
-    console.log(meals);
   } catch (err) {
     res.json(err);
+  }
+});
+
+app.post("/get4meals", async (req, res) => {
+  try {
+    const filter = req.body;
+    let query = {};
+    if (filter) {
+      if (filter.priceRange) {
+        query.price = { $lte: Number(filter.priceRange) };
+      }
+      if (filter.category) {
+        query.category = { $eq: filter.category };
+      }
+      if (filter.rating) {
+        query.rating = { $lte: Number(filter.rating) };
+      }
+    }
+    let meals = await Meal.find(query)
+      .sort({ price: -1, rating: -1 })
+      .limit(4)
+      .populate("provider");
+    res.json(meals);
+    console.log(filter);
+  } catch (err) {
+    console.log(err);
   }
 });
