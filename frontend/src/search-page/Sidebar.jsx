@@ -1,114 +1,106 @@
 import { useState } from "react";
-import { Star, House } from "lucide-react";
+import { Star, House, Menu, X } from "lucide-react";
 
 function Sidebar() {
-    const [value, setvalue] = useState(50);
-    const [clicked, setclicked] = useState(true);
-    const [checkbox, setcheckbox] = useState(false);
-    const [twocheckbox, settwocheckbox] = useState(false);
-    const [threecheckbox, setthreecheckbox] = useState(false);
-    const [veg, setveg] = useState(false);
-    const [nonveg, setnonveg] = useState(false);
-    const [radio, setradio] = useState("");
-    const onchangeHandler = (e) => {
-        setvalue(e.target.value);
-    };
-    const clickHandler = () => {
-        setclicked(!clicked);
-    };
-    const checkboxHandler = (e) => {
-        setcheckbox(e.target.checked);
-    }
-    const twocheckboxHandler = (e) => {
-        settwocheckbox(e.target.checked);
-    }
-    const threecheckboxHandler = (e) => {
-        setthreecheckbox(e.target.checked);
-    }
-    const vegHandler = (e) => {
-        setveg(e.target.checked);
-    }
-    const nonvegHandler = (e) => {
-        setnonveg(e.target.checked);
-    }
-    const ratinghandler = (e) => {
-        setradio(e.target.value);
-    }
-    const reset = () => {
-        setvalue(50);
-        setcheckbox(false)
-        settwocheckbox(false)
-        setthreecheckbox(false)
-        setveg(false)
-        setnonveg(false)
-        setradio("")
-    }
-    return (
-        <div className="h-100 w-[20%]">
-            <div className="mt-4 ml-4">
-                <div className="flex items-center gap-2 cursor-pointer" onClick={clickHandler}>
-                    <span className="text-2xl">☰</span>
-                    <b> Filters</b>
-                </div>
-
-                {clicked && (
-                    <div className="mt-4">
-                        <b className="text-[#b18961]">Food Type</b>
-                        <br />
-                        <input type="checkbox" className="mr-2 accent-green-600 rounded-3xl" checked={veg} onChange={vegHandler} />Pure veg
-                        <br />
-                        <input type="checkbox" className="mr-2 accent-green-600 " checked={nonveg} onChange={nonvegHandler} />Non veg
-                        <br />
-                        <br />
-
-                        <b className="text-[#ae8667]">Price Range (Per Meal)</b>
-                        <br />
-                        <input
-                            type="range"
-                            min="50"
-                            max="250"
-                            value={value}
-                            onChange={onchangeHandler}
-                            className="accent-[#f47519] w-full"
-                        />
-                        <div className="text-[#ae8667]">Price is: {value}</div>
-                        <br />
-
-                        <b className="text-[#b18961]">Meal Type</b>
-                        <br />
-                        <input type="checkbox" className="mr-2 accent-green-600 " checked={checkbox} onChange={checkboxHandler} />Breakfast
-                        <br />
-                        <input type="checkbox" className="mr-2 accent-green-600 " checked={twocheckbox} onChange={twocheckboxHandler} />Lunch
-                        <br />
-                        <input type="checkbox" className="mr-2 accent-green-600" checked={threecheckbox} onChange={threecheckboxHandler} />Dinner
-                        <br />
-                        <br />
-
-                        <b className="text-[#b18961]">Ratings</b>
-                        <br />
-                        <div className="flex items-center">
-                            <input type="radio" value="4.5" checked={radio === "4.5"} className="mr-2 accent-green-600 " name="btn" onChange={ratinghandler} />
-                            4.5
-                            <Star className="ml-1" size={16} color="#ebb618" strokeWidth={3} />
-                        </div>
-                        <div className="flex items-center">
-                            <input type="radio" value="3.5" checked={radio === "3.5"} className="mr-2 accent-green-600 " name="btn" onChange={ratinghandler} />
-                            3.5
-                            <Star className="ml-1" size={16} color="#ebb618" strokeWidth={3} />
-                        </div>
-                        <div className="flex items-center">
-                            <input type="radio" value="5.0" checked={radio === "5.0"} className="mr-2" name="btn" onChange={ratinghandler} />
-                            5.0
-                            <Star className="ml-1" size={16} color="#ebb618" strokeWidth={3} />
-                        </div>
-                        <div className="bg-[#ffddc8] mt-3 rounded-3xl py-2 text-center">
-                            <button className="font-bold cursor-pointer" onClick={reset}>Reset All Filters</button>
-                        </div>
-                    </div>
-                )}
-            </div>
+  const [isOpen, setIsOpen] = useState(true);
+  const [value, setvalue] = useState(50);
+  const [clicked, setclicked] = useState(true);
+  const [checkbox, setcheckbox] = useState(false);
+  const [twocheckbox, settwocheckbox] = useState(false);
+  const [threecheckbox, setthreecheckbox] = useState(false);
+  const [veg, setveg] = useState(false);
+  const [nonveg, setnonveg] = useState(false);
+  const [radio, setradio] = useState("");
+  const onchangeHandler = (e) => {
+    setvalue(e.target.value);
+  };
+  const clickHandler = () => {
+    setclicked(!clicked);
+  };
+  const checkboxHandler = (e) => {
+    setcheckbox(e.target.checked);
+  };
+  const twocheckboxHandler = (e) => {
+    settwocheckbox(e.target.checked);
+  };
+  const threecheckboxHandler = (e) => {
+    setthreecheckbox(e.target.checked);
+  };
+  const vegHandler = (e) => {
+    setveg(e.target.checked);
+  };
+  const nonvegHandler = (e) => {
+    setnonveg(e.target.checked);
+  };
+  const ratinghandler = (e) => {
+    setradio(e.target.value);
+  };
+  const reset = () => {
+    setvalue(50);
+    setcheckbox(false);
+    settwocheckbox(false);
+    setthreecheckbox(false);
+    setveg(false);
+    setnonveg(false);
+    setradio("");
+  };
+  return (
+    <aside
+      className={`${isOpen ? "w-full md:w-64" : "w-full md:w-16"} transition-all duration-300 bg-white border-r border-gray-200 p-4`}
+    >
+      <div
+        className="flex items-center justify-between mb-6 cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div className="flex items-center gap-2">
+          <Menu className="text-[#f47519]" />
+          {isOpen && <b className="text-gray-800">Filters</b>}
         </div>
-    );
+        {isOpen && <X size={18} className="md:hidden" />}
+      </div>
+
+      {isOpen && (
+        <div className="space-y-6">
+          <section>
+            <b className="text-sm uppercase tracking-wider text-gray-500">
+              Food Type
+            </b>
+            <div className="mt-2 space-y-2">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" className="w-4 h-4 accent-[#f47519]" />
+                <span className="text-gray-700">Pure Veg</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" className="w-4 h-4 accent-[#f47519]" />
+                <span className="text-gray-700">Non-Veg</span>
+              </label>
+            </div>
+          </section>
+
+          <section>
+            <b className="text-sm uppercase tracking-wider text-gray-500">
+              Price (₹{value})
+            </b>
+            <input
+              type="range"
+              min="50"
+              max="250"
+              value={value}
+              onChange={(e) => setvalue(e.target.value)}
+              className="w-full mt-2 accent-[#f47519]"
+            />
+          </section>
+
+          <button
+            onClick={reset}
+            className="w-full py-2 bg-orange-50 text-[#f47519] font-bold rounded-lg hover:bg-orange-100 transition-colors"
+          >
+            Reset Filters
+          </button>
+        </div>
+      )}
+    </aside>
+  );
 }
 
 export default Sidebar;

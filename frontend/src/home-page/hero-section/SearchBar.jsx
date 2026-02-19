@@ -1,18 +1,25 @@
 import { MapPin, Search } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const SearchBar = () => {
   const [city, setCity] = useState("");
+  const navigate = useNavigate();
 
   function handleSearchInput(e) {
     setCity(e.target.value);
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    navigate(`/search?city=${city}`);
+  }
+
   return (
     <form
-      action="/search"
       className="flex items-center mx-auto mt-6 w-full max-w-3xl"
       style={{ margin: "0 auto" }}
+      onSubmit={handleSubmit}
     >
       <div className=" bg-white px-3 h-12 flex items-center rounded-l-md">
         <MapPin size={22} color="#2a2828" />

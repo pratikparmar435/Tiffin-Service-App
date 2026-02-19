@@ -30,6 +30,7 @@ const providerSchema = new mongoose.Schema({
   phone: Number,
   password: String,
   address: String,
+  city: String,
   role: {
     type: String,
     default: "provider",
