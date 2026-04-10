@@ -65,8 +65,14 @@ app.post("/get4meals", async (req, res) => {
       .limit(4)
       .populate("provider");
     res.json(meals);
-    console.log(filter);
   } catch (err) {
     console.log(err);
   }
+});
+
+//Order Tiffin Page Routes
+app.get("/order-tiffin/:id", async (req, res) => {
+  let id = req.params.id;
+  let meal = await Meal.findById(id).populate("provider");
+  res.json(meal);
 });

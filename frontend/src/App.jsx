@@ -23,7 +23,7 @@ function App() {
           <Route path="/customer-register" element={<CustomerRegister />} />
           <Route path="/provider-register" element={<ProviderRegister />} />
           {/* Order Tiffin Page Route */}
-          <Route path="/order-tiffin" element={<OrderPage />} />
+          <Route path="/order-tiffin/:id" element={<OrderPage />} />
           {/* Profile page routes  */}
           <Route
             path="/provider-profile"
