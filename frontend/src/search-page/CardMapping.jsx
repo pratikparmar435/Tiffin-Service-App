@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 function CardMapping({ meal }) {
+  const navigate = useNavigate();
+
+  function handleCardClick() {
+    navigate(`/order-tiffin/${meal._id}`);
+  }
   return (
     <div className="group h-[46vh] bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col border border-gray-100">
       <div className="relative h-48 overflow-hidden">
@@ -34,7 +41,10 @@ function CardMapping({ meal }) {
               <span className="text-gray-500 text-sm"> /meal</span>
             </div>
           </div>
-          <button className="bg-[#f47b25] hover:bg-[#e36a14] cursor-pointer text-white px-4 py-2 rounded-xl text-sm font-bold transition-colors">
+          <button
+            onClick={handleCardClick}
+            className="bg-[#f47b25] hover:bg-[#e36a14] cursor-pointer text-white px-4 py-2 rounded-xl text-sm font-bold transition-colors"
+          >
             View Menu
           </button>
         </div>
