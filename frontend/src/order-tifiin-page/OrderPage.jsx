@@ -12,10 +12,12 @@ const OrderPage = () => {
   const [selectedPlan, setSelectedPlan] = useState("weekly");
   const [meal, setMeal] = useState({});
   const { id } = useParams();
+  const [weeklyMenu, setWeeklyMenu] = useState({});
 
   useEffect(() => {
     axios.get(`http://localhost:8080/order-tiffin/${id}`).then((res) => {
-      setMeal(res.data);
+      setMeal(res.data.meal);
+      setWeeklyMenu(res.data.weeklyMenu);
     });
   }, []);
 
@@ -23,7 +25,7 @@ const OrderPage = () => {
     <>
       <Navbar meal={meal} />
       <TiffinDetails meal={meal} />
-      <WeeklyMenu meal={meal} />
+      <WeeklyMenu menu={weeklyMenu} />
       <MealPlanContainer
         selectedPlan={selectedPlan}
         setSelectedPlan={setSelectedPlan}

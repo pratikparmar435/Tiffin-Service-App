@@ -9,6 +9,7 @@ const cors = require("cors");
 //Data base schemas
 const Meal = require("./models/meal");
 const { Provider } = require("./models/users");
+const WeeklyMenu = require("./models/WeeklyMenu");
 
 app.use(cors());
 app.use(express.json());
@@ -74,5 +75,11 @@ app.post("/get4meals", async (req, res) => {
 app.get("/order-tiffin/:id", async (req, res) => {
   let id = req.params.id;
   let meal = await Meal.findById(id).populate("provider");
-  res.json(meal);
+  let weeklyMenu = await WeeklyMenu.findOne({
+    provider: meal.provider,
+  }).populate("monday tuesday wednesday thursday friday saturday sunday");
+  if (!meal) {
+    return res.status(404).send("Meal not found");
+  }
+  res.json({ meal, weeklyMenu });
 });
